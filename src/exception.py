@@ -22,11 +22,3 @@ class CustomException(Exception):
     def __repr__(self) -> str:
         return CustomException.__name__.str()
     
-
-if __name__ == "__main__":
-    try:
-        a = 1 / 0
-    except Exception as e:
-        logging.error(e)
-        raise CustomException(e, sys)
-        
